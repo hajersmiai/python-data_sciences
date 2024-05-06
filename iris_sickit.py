@@ -27,13 +27,13 @@ print (scores.mean())
 
 model_pca = PCA(n_components=2) # on ne sait pas le nombre d'espèces
 model_pca.fit(X_iris, y_iris)
-X_2D = model_pca.transform(X_iris)
+X_PCA = model_pca.transform(X_iris)
 
-plt.scatter(X_2D[:,0],X_2D[:,1], c = y_iris, alpha=0.5)
+plt.scatter(X_PCA[:,0],X_PCA[:,1], c = y_iris, alpha=0.5)
 # plt.show()
 
 model_gm = GaussianMixture(n_components=3)
 model_gm.fit(X_iris)
 y_gm = model_gm.predict(X_iris)
-plt.scatter(X_2D[:,0],X_2D[:,1], c = y_gm, alpha=0.6)
+plt.scatter(X_PCA[:,0],X_PCA[:,1], c = y_gm, alpha=0.6)
 plt.show()
