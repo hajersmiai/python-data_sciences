@@ -1,0 +1,17 @@
+import numpy as np
+
+a= np.array([1,5,11])
+# print(a*5)
+x=np.array([[1.5,2,5],[4,75,8]])
+# print(x*2)
+# print(x[1,0])
+z=np.zeros((2,3))
+# print(z)
+y=np.ones((2,3))
+# print(y)
+# print(x*y)
+# print (np.arange(5,12,2))
+res=np.arange(100).reshape((5,20))
+print(res)
+# punt=np.linspace(0,10,20)
+# print(punt)
